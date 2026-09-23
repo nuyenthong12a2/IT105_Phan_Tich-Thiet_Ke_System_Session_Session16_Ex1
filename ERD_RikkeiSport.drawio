@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2026-09-23T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="ERD - Dat buoi tap" id="erd-rikkeisport">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entity HOI_VIEN -->
+        <mxCell id="e_hoivien" value="&lt;b&gt;HOI_VIEN&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="MaHV (PK)" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=4;html=1;" vertex="1" parent="e_hoivien">
+          <mxGeometry y="30" width="220" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="HoTen" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_hoivien">
+          <mxGeometry y="57.5" width="220" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="SoDienThoai" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_hoivien">
+          <mxGeometry y="85" width="220" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="NgayDangKy" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_hoivien">
+          <mxGeometry y="112.5" width="220" height="27.5" as="geometry" />
+        </mxCell>
+
+        <!-- Entity BUOI_TAP -->
+        <mxCell id="e_buoitap" value="&lt;b&gt;BUOI_TAP&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="240" height="167.5" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="MaBuoiTap (PK)" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=4;html=1;" vertex="1" parent="e_buoitap">
+          <mxGeometry y="30" width="240" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="NgayTap" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_buoitap">
+          <mxGeometry y="57.5" width="240" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="GioTap" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_buoitap">
+          <mxGeometry y="85" width="240" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="TenHuanLuyenVien" style="text;align=left;verticalAlign=middle;spacingLeft=8;html=1;" vertex="1" parent="e_buoitap">
+          <mxGeometry y="112.5" width="240" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="MaHV_FK (FK)" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;html=1;" vertex="1" parent="e_buoitap">
+          <mxGeometry y="140" width="240" height="27.5" as="geometry" />
+        </mxCell>
+
+        <!-- Relationship: HOI_VIEN (1,1 mandatory one) ---- (0,N zero or many) BUOI_TAP -->
+        <mxCell id="rel1" value="dat" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=none;startArrow=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;" edge="1" parent="1" source="e_hoivien" target="e_buoitap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
